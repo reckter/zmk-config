@@ -7,6 +7,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+// Copied from https://github.com/urob/zmk-nodefree-config
+
+#include "../zmk-nodefree-config/helper.h"
+#include "../zmk-nodefree-config/international_chars/german.dtsi"
+
 // Layers
 
 #define DVORAK 0
@@ -74,7 +79,7 @@
         umlauts {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &de_ae  &de_oe  &trans  &de_ue  &trans                                  &trans  &trans  &trans  &trans  &de_eszett  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
