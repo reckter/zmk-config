@@ -8,9 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 
 // Copied from https://github.com/urob/zmk-nodefree-config
-
+#define HOST_OS 2  // set to 2 for macOS/Windows-Alt-Codes, default is 0 (Windows)
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
+
+ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
 // Layers
 
@@ -70,7 +72,7 @@
         Raise {
             bindings = <
 &trans         &trans      &trans  &trans  &trans  &trans                                  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &trans     &trans    &trans
-&trans  &kp AMPERSAND  &kp DOLLAR  &trans  &trans  &trans                                  &trans          &kp EXCL             &kp AT  &kp HASH  &kp UNDER  &kp BSLH
+&trans  &trans &kp AMPERSAND  &kp DOLLAR  &euro_sign    &trans                                  &trans          &kp EXCL             &kp AT  &kp HASH  &kp UNDER  &kp BSLH
 &trans         &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp GRAVE             &trans    &trans     &trans    &trans
                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans             &trans
             >;
