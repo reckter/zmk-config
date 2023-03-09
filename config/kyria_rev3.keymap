@@ -29,10 +29,10 @@
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 
             bindings = <
-&kp TAB  &kp SINGLE_QUOTE  &kp COMMA   &kp DOT     &kp P           &kp Y                                                              &kp F         &kp G             &kp C  &kp R  &kp L     &kp BSPC
-&kp ESC             &kp A      &kp O     &kp E     &kp U           &kp I                                                              &kp D         &kp H             &kp T  &kp N  &kp S  &lt 4 SLASH
-  &mo 5          &kp SEMI      &kp Q     &kp J     &kp K           &kp X  &kp LSHFT  &kp LS(LA(LC(LG(P))))  &kp LSHFT  &kp LSHFT      &kp B         &kp M             &kp W  &kp V  &kp Z    &kp ENTER
-                                      &kp LGUI  &kp LALT  &kp LEFT_SHIFT      &mo 2       &kp LEFT_CONTROL   &kp LGUI      &mo 3  &kp SPACE  &kp LEFT_ALT  &kp LEFT_CONTROL
+&kp TAB  &kp SINGLE_QUOTE  &kp COMMA           &kp DOT     &kp P           &kp Y                                                                     &kp F     &kp G         &kp C  &kp R  &kp L     &kp BSPC
+&kp ESC             &kp A      &kp O             &kp E     &kp U           &kp I                                                                     &kp D     &kp H         &kp T  &kp N  &kp S  &lt 4 SLASH
+  &mo 5          &kp SEMI      &kp Q             &kp J     &kp K           &kp X  &kp LSHFT  &kp LS(LA(LC(LG(P))))          &kp LGUI  &kp LSHFT      &kp B     &kp M         &kp W  &kp V  &kp Z    &kp ENTER
+                                      &kp LEFT_CONTROL  &kp LGUI  &kp LEFT_SHIFT      &mo 2           &kp LEFT_ALT  &kp LEFT_CONTROL      &mo 3  &kp SPACE  &kp LGUI  &kp LEFT_ALT
             >;
         };
 
@@ -55,10 +55,10 @@
 
         Lower {
             bindings = <
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp PERCENT                                  &kp CARET        &kp LEFT_BRACE        &kp RIGHT_BRACE  &kp STAR     &trans    &trans
-&trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0                                  &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS  &kp MINUS  &kp PIPE
-&trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9        &trans  &trans  &trans  &trans  &trans     &trans             &kp TILDE              &kp GRAVE    &trans     &trans    &trans
-                                    &trans        &trans        &trans  &trans  &trans  &trans  &trans     &trans                &trans                 &trans
+&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp PERCENT                                                  &kp CARET        &kp LEFT_BRACE        &kp RIGHT_BRACE  &kp STAR     &trans    &trans
+&trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0                                                  &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS  &kp MINUS  &kp PIPE
+&trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9        &trans  &trans  &trans       &kp C_VOL_UP  &kp C_MUTE      &trans             &kp TILDE              &kp GRAVE    &trans     &trans    &trans
+                                    &trans        &trans        &trans  &trans  &trans  &kp C_VOLUME_DOWN      &trans  &kp C_PREV           &kp C_PAUSE             &kp C_NEXT
             >;
         };
 
