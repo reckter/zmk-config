@@ -11,7 +11,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        dvorak {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
             // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
@@ -21,7 +21,7 @@
             bindings = <
 &kp TAB  &kp SINGLE_QUOTE  &kp COMMA   &kp DOT    &kp P           &kp Y                                                  &kp F     &kp G     &kp C  &kp R  &kp L     &kp BSPC
 &kp ESC             &kp A      &kp O     &kp E    &kp U           &kp I                                                  &kp D     &kp H     &kp T  &kp N  &kp S  &lt 4 SLASH
-  &mo 1          &kp SEMI      &kp Q     &kp J    &kp K           &kp X  &kp LSHFT  &kp LSHFT  &kp LSHFT  &kp LSHFT      &kp B     &kp M     &kp W  &kp V  &kp Z    &kp ENTER
+  &mo 5          &kp SEMI      &kp Q     &kp J    &kp K           &kp X  &kp LSHFT  &kp LSHFT  &kp LSHFT  &kp LSHFT      &kp B     &kp M     &kp W  &kp V  &kp Z    &kp ENTER
                                       &kp LGUI  &kp DEL  &kp LEFT_SHIFT      &mo 2    &kp ESC   &kp LGUI      &mo 3  &kp SPACE  &kp BSPC  &kp RALT
             >;
         };
@@ -70,7 +70,7 @@
             >;
         };
 
-        Layer__5 {
+        movement {
             bindings = <
 &trans  &kp F1   &kp F2   &kp F3   &kp F4  &trans                                  &trans    &trans    &trans  &trans     &trans  &trans
 &trans  &kp F5   &kp F6   &kp F7   &kp F8  &trans                                  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
