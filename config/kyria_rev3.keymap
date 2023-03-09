@@ -7,6 +7,17 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+// Layers
+#define DVORAK 0
+#define QWERTY 1
+#define LOWER 2
+#define RAISE 3
+#define UMLAUTS 4
+#define MOVEMENT 5
+#define SUPER 6
+
+
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -79,7 +90,7 @@
             >;
         };
 
-        Layer__6 {
+        super {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
@@ -87,5 +98,11 @@
                         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
+        conditional_layers {
+            compatible = "zmk,conditional-layers";
+            tri_layer {
+                if-layers = <LOWER RAISE>;
+                then-layer = <SUPER>;
+            };
+       };
     };
-};
