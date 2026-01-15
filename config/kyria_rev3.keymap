@@ -16,9 +16,7 @@
 
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
-&mt {
-    tapping-term-ms = <300>;
-};
+&mt { tapping-term-ms = <300>; };
 
 // Layers
 
@@ -42,10 +40,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 
             bindings = <
-&kp TAB  &kp SINGLE_QUOTE  &kp COMMA           &kp DOT           &kp P       &kp Y                                                                          &kp F      &kp G       &kp C            &kp R                &kp L  &kp BSPC
-&kp ESC  &kp A             &mt LEFT_CONTROL O  &mt LEFT_ALT E    &mt LCMD U  &kp I                                                                          &kp D      &mt RCMD H  &mt RIGHT_ALT T  &mt RIGHT_CONTROL N  &kp S  &lt 4 SLASH
-&mo 5    &kp SEMI          &kp Q               &kp J             &kp K       &kp X           &kp LSHFT  &kp LS(LA(LC(LG(P))))  &kp LGUI          &kp LSHFT  &kp B      &kp M       &kp W            &kp V                &kp Z  &kp ENTER
-                                               &kp LEFT_CONTROL  &kp LGUI    &kp LEFT_SHIFT  &mo 2      &kp LEFT_ALT           &kp LEFT_CONTROL  &mo 3      &kp SPACE  &kp LGUI    &kp LEFT_ALT
+&kp TAB  &kp SINGLE_QUOTE  &kp COMMA  &kp DOT           &kp P     &kp Y                                                                          &kp F      &kp G     &kp C         &kp R  &kp L  &kp BSPC
+&kp ESC  &kp A             &kp O      &kp E             &kp U     &kp I                                                                          &kp D      &kp RCMD  &kp T         &kp N  &kp S  &lt 4 SLASH
+&mo 5    &kp SEMI          &kp Q      &kp J             &kp K     &kp X           &kp LSHFT  &kp LS(LA(LC(LG(P))))  &kp LGUI          &kp LSHFT  &kp B      &kp M     &kp W         &kp V  &kp Z  &kp ENTER
+                                      &kp LEFT_CONTROL  &kp LGUI  &kp LEFT_SHIFT  &mo 2      &kp LEFT_ALT           &kp LEFT_CONTROL  &mo 3      &kp SPACE  &kp LGUI  &kp LEFT_ALT
             >;
         };
 
