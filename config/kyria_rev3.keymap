@@ -17,7 +17,7 @@
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
 &mt {
-    tapping-term-ms = 300;
+    tapping-term-ms = <300>;
 };
 
 // Layers
