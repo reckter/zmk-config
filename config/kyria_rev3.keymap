@@ -8,7 +8,9 @@
 #include <dt-bindings/zmk/keys.h>
 
 // Copied from https://github.com/urob/zmk-nodefree-config
+
 #define HOST_OS 2  // set to 2 for macOS/Windows-Alt-Codes, default is 0 (Windows)
+
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
 
@@ -36,10 +38,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 
             bindings = <
-&kp TAB  &kp SINGLE_QUOTE  &kp COMMA           &kp DOT     &kp P           &kp Y                                                                     &kp F     &kp G         &kp C  &kp R  &kp L     &kp BSPC
-&kp ESC             &kp A      &kp O             &kp E     &kp U           &kp I                                                                     &kp D     &kp H         &kp T  &kp N  &kp S  &lt 4 SLASH
-  &mo 5          &kp SEMI      &kp Q             &kp J     &kp K           &kp X  &kp LSHFT  &kp LS(LA(LC(LG(P))))          &kp LGUI  &kp LSHFT      &kp B     &kp M         &kp W  &kp V  &kp Z    &kp ENTER
-                                      &kp LEFT_CONTROL  &kp LGUI  &kp LEFT_SHIFT      &mo 2           &kp LEFT_ALT  &kp LEFT_CONTROL      &mo 3  &kp SPACE  &kp LGUI  &kp LEFT_ALT
+&kp TAB  &kp SINGLE_QUOTE  &kp COMMA           &kp DOT           &kp P       &kp Y                                                                          &kp F      &kp G       &kp C            &kp R                &kp L  &kp BSPC
+&kp ESC  &kp A             &mt LEFT_CONTROL O  &mt LEFT_ALT E    &mt LCMD U  &kp I                                                                          &kp D      &mt RCMD H  &mt RIGHT_ALT T  &mt RIGHT_CONTROL N  &kp S  &lt 4 SLASH
+&mo 5    &kp SEMI          &kp Q               &kp J             &kp K       &kp X           &kp LSHFT  &kp LS(LA(LC(LG(P))))  &kp LGUI          &kp LSHFT  &kp B      &kp M       &kp W            &kp V                &kp Z  &kp ENTER
+                                               &kp LEFT_CONTROL  &kp LGUI    &kp LEFT_SHIFT  &mo 2      &kp LEFT_ALT           &kp LEFT_CONTROL  &mo 3      &kp SPACE  &kp LGUI    &kp LEFT_ALT
             >;
         };
 
@@ -51,10 +53,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 
             bindings = <
-&kp TAB  &kp Q  &kp W     &kp E         &kp R             &kp T                                                     &kp Y     &kp U      &kp I    &kp O     &kp P   &kp BSPC
-&kp ESC  &kp A  &kp S     &kp D         &kp F             &kp G                                                     &kp H     &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
-  &mo 1  &kp Z  &kp X     &kp C         &kp V             &kp B       &kp LSHFT  &kp LSHFT  &kp LSHFT  &kp LSHFT    &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-                       &kp LGUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp ESC   &kp LGUI  &kp SPACE  &kp TAB  &kp BSPC   &kp RALT
+&kp TAB  &kp Q  &kp W  &kp E     &kp R         &kp T                                                              &kp Y    &kp U     &kp I      &kp O    &kp P     &kp BSPC
+&kp ESC  &kp A  &kp S  &kp D     &kp F         &kp G                                                              &kp H    &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&mo 1    &kp Z  &kp X  &kp C     &kp V         &kp B             &kp LSHFT       &kp LSHFT  &kp LSHFT  &kp LSHFT  &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
+                       &kp LGUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp ESC    &kp LGUI   &kp SPACE  &kp TAB  &kp BSPC  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -62,37 +64,37 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
         Lower {
             bindings = <
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp PERCENT                                                  &kp CARET        &kp LEFT_BRACE        &kp RIGHT_BRACE  &kp STAR     &trans    &trans
-&trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0                                                  &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS  &kp MINUS  &kp PIPE
-&trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9        &trans  &trans  &trans       &kp C_VOL_UP  &kp C_MUTE      &trans             &kp TILDE              &kp GRAVE    &trans     &trans    &trans
-                                    &trans        &trans        &trans  &trans  &trans  &kp C_VOLUME_DOWN      &trans  &kp C_PREV           &kp C_PAUSE             &kp C_NEXT
+&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERCENT                                                  &kp CARET   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp STAR  &trans     &trans
+&trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0                                                 &kp EQUAL   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS  &kp MINUS  &kp PIPE
+&trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans  &trans  &kp C_VOL_UP       &kp C_MUTE  &trans      &kp TILDE             &kp GRAVE              &trans    &trans     &trans
+                              &trans        &trans        &trans        &trans  &trans  &kp C_VOLUME_DOWN  &trans      &kp C_PREV  &kp C_PAUSE           &kp C_NEXT
             >;
         };
 
         Raise {
             bindings = <
-&trans         &trans      &trans  &trans  &trans  &trans                                  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &trans     &trans    &trans
-&trans  &trans &kp AMPERSAND  &kp DOLLAR  &euro_sign    &trans                                  &trans          &kp EXCL             &kp AT  &kp HASH  &kp UNDER  &kp BSLH
-&trans         &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp GRAVE             &trans    &trans     &trans    &trans
-                                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans             &trans
+&trans  &trans  &trans         &trans      &trans      &trans                                  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans    &trans     &trans
+&trans  &trans  &kp AMPERSAND  &kp DOLLAR  &euro_sign  &trans                                  &trans  &kp EXCL          &kp AT             &kp HASH  &kp UNDER  &kp BSLH
+&trans  &trans  &trans         &trans      &trans      &trans  &trans  &trans  &trans  &trans  &trans  &kp GRAVE         &trans             &trans    &trans     &trans
+                               &trans      &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans
             >;
         };
 
         umlauts {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans      &trans
 &trans  &de_ae  &de_oe  &trans  &de_ue  &trans                                  &trans  &trans  &trans  &trans  &de_eszett  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans
                         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         movement {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4  &trans                                  &trans    &trans    &trans  &trans     &trans  &trans
-&trans  &kp F5   &kp F6   &kp F7   &kp F8  &trans                                  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans  &trans
-                          &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans                                  &trans  &trans    &trans    &trans  &trans     &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans                                  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
+                         &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
             >;
         };
 
