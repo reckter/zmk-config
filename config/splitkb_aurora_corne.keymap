@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 
 // Copied from https://github.com/urob/zmk-nodefree-config
 
@@ -26,7 +25,6 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 #define UMLAUTS 4
 #define MOVEMENT 5
 #define SUPER 6
-
 #define KEYS_RIGHT 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35
 #define KEYS_LEFT 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29
 #define THUMBS 36 37 38 39 40 41
@@ -41,9 +39,11 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <KEYS_RIGHT THUMBS>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
+
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -52,6 +52,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <KEYS_LEFT THUMBS>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
@@ -68,11 +69,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             //                     | GUI  | DEL  |      |   |   RET   |  SPACE  | TAB  |
 
             bindings = <
-&kp TAB  &kp SINGLE_QUOTE  &kp COMMA  &kp DOT   &kp P                                        &kp Y    &kp F  &kp G      &kp C         &kp R  &kp L  &kp BSPC
-&kp ESC  &kp A             &hml LEFT_ALT O      &hml LEFT_CONTROL E     &hml LGUI U    &kp I    &kp D  &hmr LGUI H      &hmr LEFT_CONTROL T         &hmr LEFT_ALT N  &kp S  &lt 4 SLASH
-&mo 5    &kp SEMI          &kp Q               &kp J                  &kp K         &kp X    &kp B  &kp M      &kp W         &kp V  &kp Z  &kp ENTER
-                                      &kp LGUI  &kp LEFT_SHIFT  &mo 2                        &mo 3  &kp SPACE  &kp LEFT_ALT
-                                      &kp LEFT_CONTROL  &kp LGUI  &kp LEFT_SHIFT  &mo 2      &kp LEFT_ALT           &kp LEFT_CONTROL  &mo 3      &kp SPACE  &kp LGUI  &kp LEFT_ALT
+&kp TAB  &kp SINGLE_QUOTE  &kp COMMA        &kp DOT              &kp P           &kp Y    &kp F  &kp G        &kp C                &kp R            &kp L  &kp BSPC
+&kp ESC  &kp A             &hml LEFT_ALT O  &hml LEFT_CONTROL E  &hml LGUI U     &kp I    &kp D  &hmr LGUI H  &hmr LEFT_CONTROL T  &hmr LEFT_ALT N  &kp S  &lt 4 SLASH
+&mo 5    &kp SEMI          &kp Q            &kp J                &kp K           &kp X    &kp B  &kp M        &kp W                &kp V            &kp Z  &kp ENTER
+                                            &kp LGUI             &kp LEFT_SHIFT  &mo 2    &mo 3  &kp SPACE    &kp LEFT_ALT
             >;
         };
 
@@ -122,10 +122,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
         movement {
             bindings = <
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &studio_unlock  &trans    &trans    &trans  &trans     &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans    &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &trans    &trans    &trans  &trans     &trans
-                         &trans   &trans   &trans    &trans  &trans    &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp LS(LA(LC(LG(P))))    &studio_unlock  &trans    &trans    &trans  &trans     &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans                   &trans          &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans                   &trans          &trans    &trans    &trans  &trans     &trans
+                         &trans   &trans   &trans                   &trans          &trans    &trans
             >;
         };
 
