@@ -28,6 +28,32 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 #define SUPER 6
 
 / {
+    behaviors {
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <O>, <E>, <U>; // List of keys on the right side of the keyboard
+            hold-trigger-on-release;
+        };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <H>, <T>, <N>; // List of keys on the left side of the keyboard
+            hold-trigger-on-release;
+        };
+    };
+};
+/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -40,7 +66,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
             bindings = <
 &kp TAB  &kp SINGLE_QUOTE  &kp COMMA  &kp DOT   &kp P                                        &kp Y    &kp F  &kp G      &kp C         &kp R  &kp L  &kp BSPC
-&kp ESC  &kp A             &mt LEFT_ALT O      &mt LEFT_CONTROL E     &mt LGUI U    &kp I    &kp D  &mt LGUI H      &mt LEFT_CONTROL T         &mt LEFT_ALT N  &kp S  &lt 4 SLASH
+&kp ESC  &kp A             &hml LEFT_ALT O      &hml LEFT_CONTROL E     &hml LGUI U    &kp I    &kp D  &hmr LGUI H      &hmr LEFT_CONTROL T         &hmr LEFT_ALTcc N  &kp S  &lt 4 SLASH
 &mo 5    &kp SEMI          &kp Q               &kp J                  &kp K         &kp X    &kp B  &kp M      &kp W         &kp V  &kp Z  &kp ENTER
                                       &kp LGUI  &kp LEFT_SHIFT  &mo 2                        &mo 3  &kp SPACE  &kp LEFT_ALT
                                       &kp LEFT_CONTROL  &kp LGUI  &kp LEFT_SHIFT  &mo 2      &kp LEFT_ALT           &kp LEFT_CONTROL  &mo 3      &kp SPACE  &kp LGUI  &kp LEFT_ALT
