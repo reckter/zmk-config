@@ -69,7 +69,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
             bindings = <
 &kp TAB  &kp SINGLE_QUOTE  &kp COMMA  &kp DOT   &kp P                                        &kp Y    &kp F  &kp G      &kp C         &kp R  &kp L  &kp BSPC
-&kp ESC  &kp A             &mt LEFT_ALT O      &mt LEFT_CONTROL E     &mt LGUI U    &kp I    &kp D  &mt LGUI H      &mt LEFT_CONTROL T         &mt LEFT_ALTcc N  &kp S  &lt 4 SLASH
+&kp ESC  &kp A             &mt LEFT_ALT O      &mt LEFT_CONTROL E     &mt LGUI U    &kp I    &kp D  &mt LGUI H      &mt LEFT_CONTROL T         &mt LEFT_ALT N  &kp S  &lt 4 SLASH
 &mo 5    &kp SEMI          &kp Q               &kp J                  &kp K         &kp X    &kp B  &kp M      &kp W         &kp V  &kp Z  &kp ENTER
                                       &kp LGUI  &kp LEFT_SHIFT  &mo 2                        &mo 3  &kp SPACE  &kp LEFT_ALT
                                       &kp LEFT_CONTROL  &kp LGUI  &kp LEFT_SHIFT  &mo 2      &kp LEFT_ALT           &kp LEFT_CONTROL  &mo 3      &kp SPACE  &kp LGUI  &kp LEFT_ALT
