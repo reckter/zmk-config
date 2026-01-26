@@ -56,8 +56,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             hold-trigger-on-release;
         };
     };
-};
-/ {
+
     keymap {
         compatible = "zmk,keymap";
 
