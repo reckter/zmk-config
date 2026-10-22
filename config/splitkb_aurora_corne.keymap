@@ -58,6 +58,14 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             hold-trigger-key-positions = <KEYS_LEFT THUMBS>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
+
+        // single tap does nothing so an accidental press can't wipe the pairing
+        bt_clr_dbl: bt_clear_double_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&none>, <&bt BT_CLR>;
+        };
     };
 
     conditional_layers {
@@ -141,7 +149,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
         super {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_CLR_ALL    &bt BT_NXT  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &bt BT_SEL 0  &trans  &trans  &trans  &bt_clr_dbl
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
